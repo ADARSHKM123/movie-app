@@ -30,6 +30,7 @@ function App() {
   const [showing, setshow] = useState(false);
 
   const showSeats =(e)=>{
+    console.log(e.target);
     console.log('clicked');
     console.log(showing);
     setshow(!showing);
@@ -41,8 +42,9 @@ function App() {
 
   return (
     <div className="App">
-      {movieDta.map((each,i)=>{
+        {movieDta.map((each,i)=>{
         return(
+          <>
           <div key={i} className='movies'>
           <div>
             <p>{each.name}</p>
@@ -54,16 +56,13 @@ function App() {
             <p>{each.time}</p>
           </div>
           <div>
-            <button className='btn' onClick={showSeats}>Available Seats</button>
+            <button className='btn' onClick={showSeats} value={i+1} checked={i+1}>Available Seats</button>
           </div>
         </div>
-        )
-      })
-      }
-        {showing ? <div className='seats'>
+        {showing ? <div className='seats' value={i+1} checked={i+1}>
           <div className='container'>
           <div className='row'>
-            <div className='seat'></div>
+            <div className='seat'></div>  
             <div className='seat booked' onClick={selectSeat}></div>
             <div className='seat booked'></div>
             <div className='seat '></div>
@@ -158,9 +157,41 @@ function App() {
             </div>
             
           </div>: ''}
-        
+        </>
+        )
+      })
+      }
+ 
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+const movieDta = [
+  {
+    name:"Sholay",
+    date:"23-21-2022",
+    time: "5:00 PM"
+  },
+  {
+    name: "The Shawshank Redemption",
+    date: "2022-05-01",
+    time: "10:00 AM"
+  },
+  {
+    name: "The Godfather",
+    date: "2022-05-02",
+    time: "2:00 PM"
+  },
+  {
+    name: "The Dark Knight",
+    date: "2022-05-03",
+    time: "9:00 PM"
+  }
+]
