@@ -33,13 +33,13 @@ function App() {
     <div className="App">
       <div className='movies'>
         <div>
-          <p>manikkam</p>
+          <p>speed</p>
         </div>
         <div>
-          <p>23-20-2022</p>
+          <p>21-2-2023</p>
         </div>
         <div>
-          <p>3:00 PM</p>
+          <p>5:00 PM</p>
         </div>
         <div>
           <button className='btn' onClick={showSeats} value={1}>Available Seats</button>
@@ -147,13 +147,13 @@ function App() {
 
       <div className='movies'>
         <div>
-          <p>manikkam</p>
+          <p>mark</p>
         </div>
         <div>
-          <p>23-20-2022</p>
+          <p>12-2-2023</p>
         </div>
         <div>
-          <p>3:00 PM</p>
+          <p>9:00 AM</p>
         </div>
         <div>
           <button className='btn' onClick={showSeats} value={2}>Available Seats</button>
@@ -261,13 +261,13 @@ function App() {
 
       <div className='movies'>
         <div>
-          <p>manikkam</p>
+          <p>spadikam</p>
         </div>
         <div>
-          <p>23-20-2022</p>
+          <p>10-12-2023</p>
         </div>
         <div>
-          <p>3:00 PM</p>
+          <p>10:00 PM</p>
         </div>
         <div>
           <button className='btn' onClick={showSeats} value={3}>Available Seats</button>
