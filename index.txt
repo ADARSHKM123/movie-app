@@ -41,20 +41,25 @@ function App() {
 
   return (
     <div className="App">
-          <div className='movies'>
+      {movieDta.map((each,i)=>{
+        return(
+          <div key={i} className='movies'>
           <div>
-            <p>manikkam</p>
+            <p>{each.name}</p>
           </div>
           <div>
-            <p>23-20-2022</p>
+            <p>{each.date}</p>
           </div>
           <div>
-            <p>3:00 PM</p>
+            <p>{each.time}</p>
           </div>
           <div>
             <button className='btn' onClick={showSeats}>Available Seats</button>
           </div>
         </div>
+        )
+      })
+      }
         {showing ? <div className='seats'>
           <div className='container'>
           <div className='row'>
@@ -153,37 +158,6 @@ function App() {
             </div>
             
           </div>: ''}
-
-
-        <div className='movies'>
-          <div>
-            <p>manikkam</p>
-          </div>
-          <div>
-            <p>23-20-2022</p>
-          </div>
-          <div>
-            <p>3:00 PM</p>
-          </div>
-          <div>
-            <button>Available Seats</button>
-          </div>
-        </div>
-
-        <div className='movies'>
-          <div>
-            <p>manikkam</p>
-          </div>
-          <div>
-            <p>23-20-2022</p>
-          </div>
-          <div>
-            <p>3:00 PM</p>
-          </div>
-          <div>
-            <button>Book Now</button>
-          </div>
-        </div>
         
     </div>
   );
